@@ -1,0 +1,15 @@
+# Diretórios gerados pelo Composer
+vendor/
+
+# Arquivos de configuração locais
+.env
+config/local.php
+
+# Arquivos de cache
+cache/
+storage/
+
+# Logs
+logs/
+
+# Arquivos 
