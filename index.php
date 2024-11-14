@@ -14,11 +14,36 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            background: url('https://i.postimg.cc/Qx6fY7Kc/fundo.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            background-position: center;
+
         }
 
         .login-container {
-            width: 100%;
-            max-width: 400px;
+            width: 420px;
+            background-color: transparent;
+            border: 2px solid rgba (255,255,255, .2);
+            max-width: 800px;
+            border-radius: 10px;
+            color: #fff;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba (0,0,0 .2);
+        }
+
+        .card {
+            background-color: rgba (255,255,255, 0.2);
+            border: none;
+        }
+
+        .card-body{
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .container h3{
+            font-family: "Poppins", sans-serif;
+            font-size: 70px;
+            text-align: center;
         }
     </style>
 </head>
@@ -26,51 +51,28 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <h1 class="text-center">QuimiDocs</h1>
+           
                 <div class="card">
                     <div class="card-body">
-                        <h3> Acesso Restrito </h3>
+                        <h3>QuimiDocs</h3>
                         <?php
-                            session_start();
-                            if (isset($_SESSION["mensagem"])) {
-                                echo '<div class="alert alert-danger">' . $_SESSION["mensagem"] . '</div>';
-                                unset($_SESSION["mensagem"]);
-                            }
+                        session_start();
+                        if (isset($_SESSION["mensagem"])) {
+                            echo '<div class="alert alert-danger">' . $_SESSION["mensagem"] . '</div>';
+                            unset($_SESSION["mensagem"]);
+                        }
                         ?>
-                    <div>
-                <div class="card">
-                    <div class="card-body">
                         <form action="login.php" method="POST">
                             <div class="mb-3">
-                                <label>Usuario</label>
-                                <input type="text" name="usuario" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label>Departamento</label>                                
-                                <select name="departamento" id= "departameto" class="form-control">
-                                    <option value="">Selecione o Departamento</option>
-                                    <option value="Almoxarifado">Almoxarifado</option>
-                                    <option value="Apollo">Apollo</option>
-                                    <option value="Casa de Tintas">Casa de Tintas</option>
-                                    <option value="Central de Residuos">Central de Residuos</option>
-                                    <option value="DPA">DPA</option>
-                                    <option value="Jardinagem">Jardinagem</option>
-                                    <option value="Limpeza">Limpeza</option>
-                                    <option value="Login">Login</option>
-                                    <option value="Manutenção de Empilhadeira">Manutenção de Empilhadeira</option>
-                                    <option value="Restaurante 1">Restaurante 1</option>
-                                    <option value="Resturante 2">Resturante 2</option>
-                                    <option value="Rouparia">Rouparia</option>
-                                    <option value="Sala de Lubrificação">Sala de Lubrificação</option>
-                                </select>
+                                <label>Usuário</label>
+                                <input type="text" name="usuario" class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <label>Senha</label>
-                                <input type="password" name="senha" class="form-control">
+                                <input type="password" name="senha" class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary">Entrar</button>
-                                <a href="cadastro.php" class="btn btn-dark">Cadastro</a>
                             </div>
                         </form>
                     </div>
@@ -80,3 +82,4 @@
     </div>
 </body>
 </html>
+

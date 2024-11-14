@@ -1,7 +1,7 @@
 <?php
-    define('HOST', 'localhost');
-    define('USER','root');
-    define('PASS','');
-    define('BASE','quimidocs');
-
-    $conn = new MySQLi(HOST, USER, PASS, BASE);
+// Informações de conexão com o banco de dados MySQL
+define('DB_HOST', '191.252.110.154');
+define('DB_USER', 'admin');
+define('DB_PASSWORD', '123'); // Substitua por sua senha real
+define('DB_NAME', 'univesp');
+?>
