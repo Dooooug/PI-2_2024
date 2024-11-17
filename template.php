@@ -7,8 +7,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuimiDocs</title>
+    <title>QuimDocs</title>
     <style>
+        
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .file-list {
+            list-style-type: none;
+            padding: 20px;
+            width: 100%;
+        }
+        .file-list li {
+            
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+            
+        }
         table {
             border-collapse: collapse;
             width: 100%;
@@ -44,7 +61,7 @@
             background-color: #007bff;
             z-index: 1000;
             color: white;
-            padding: 20px;
+            padding: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,10 +75,12 @@
             color: white;
             padding: 10px;
             width: 200px;
-            height: calc(100vh - 50px);
+            height: calc(100vh - 70px);
             position:fixed;
-            top: 50px;
+            top: 70px;
             left: 0;
+            overflow: auto;
+            box-sizing: border-box;
         }
         .sidebar ul {
             list-style-type: none;
@@ -75,12 +94,18 @@
             text-decoration: none;
         }
         .main-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            flex: 1;
             padding: 20px;
+            box-sizing: border-box;
             margin-left: 220px;
-            margin-top: 70px;
+            margin-top:70px;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content: center;
+            height: calc(100vh-70px);
+            overflow: auto;
+            
         }
         .container {
             background-color: white;
@@ -91,10 +116,13 @@
             text-align: center;
             margin-bottom: 20px;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
+
+        } .rotulo { 
+            text-align: center;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .success-message {
             background-color: #d4edda;
@@ -121,28 +149,49 @@
         .button-group input:hover, .button-group a:hover {
             background-color: #0056b3;
         }
+
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 120%;
+            max-width: 1200px;
+
+        }
         .card {
             background-color: #007bff;
             color: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 60px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 35%;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+
+        .navbar-brand{
+            font-size: 24px;
+            color: white;
+            
+
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a class="navbar-brand">QuimiDocs</a>
+        <a class="navbar-brand">QuimDocs</a>
         
     </div>
     <div class="sidebar">
+        <h2> Menu </h2>
         <ul>
             <li><a href="dashboard.php">Inicio</a></li>
             <li><a href="cadastro.php">Cadastro de Usuarios</a></li>
-            <li><a href="#">Cadastro de Produtos</a></li>
-            <li><a href="#">Cadastro de Armazenamentos</a></li>
+            <li><a href="cadastro_produtos.php">Cadastro de Produtos</a></li>
+            <li><a href="cadastro_armazenamento.php">Cadastro de Locais de Armazenamentos</a></li>
             <li><a href="#">Relatório de Produtos Quimicos</a></li>
+            <li><a href="listar_arquivos.php">Download de FISPQ</a></li>
             <li><a href='logout.php' >Sair</a></li>
         </ul>
     </div>

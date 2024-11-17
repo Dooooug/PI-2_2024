@@ -66,4 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: consulta_usuarios.php");
     exit();
 }
+
 ?>

@@ -24,6 +24,7 @@ $cadastro_sucesso = isset($_SESSION["cadastro_sucesso"]) && $_SESSION["cadastro_
 $content = '
     <body>
         <div class="sidebar">
+         <h2> Menu Usuários</h2>
             <ul>
                 <li><a href="dashboard.php">Inicio</a></li>
                 <li><a href="cadastro.php">Cadastro de Usuarios</a></li>

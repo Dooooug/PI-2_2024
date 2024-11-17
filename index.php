@@ -54,7 +54,7 @@
            
                 <div class="card">
                     <div class="card-body">
-                        <h3>QuimiDocs</h3>
+                        <h3>QuimDocs</h3>
                         <?php
                         session_start();
                         if (isset($_SESSION["mensagem"])) {
